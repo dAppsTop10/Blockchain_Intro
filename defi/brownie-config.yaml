@@ -1,0 +1,21 @@
+dotenv: .env
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.1.0
+compiler:
+  solc:
+
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.1"
+
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@0.4.0
+  - OpenZeppelin/openzeppelin-contracts@4.8.1
+networks:
+  default: mainnet-fork
+  mainnet-fork:
+    uniswap-router: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    sushiswap-router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
+    provider: "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5"
+    weth-token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    dai-token: "0x6b175474e89094c44da98b954eedeac495271d0f"
+
