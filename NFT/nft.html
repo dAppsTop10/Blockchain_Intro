@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+<script>
+	async function loadWeb3() {
+        if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum);
+            window.ethereum.enable();
+        }
+	}
+	async function getCurrentAccount() {
+        const accounts = await window.web3.eth.getAccounts();
+        return accounts[0];
+    }
+	async function load() {
+        await loadWeb3();
+		const account = await getCurrentAccount();
+		
+	}
+	load();		
+</script>
+</body>
+</html>
